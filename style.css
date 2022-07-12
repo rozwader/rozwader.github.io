@@ -466,21 +466,6 @@ section{
     color: var(--main_color);
 }
 
-.watermarkSpan{
-    font-size: 200pt !important;
-    color: var(--main_color);
-    opacity: 0.05;
-    background-color: transparent !important;
-    border: none !important;
-    outline: none !important;
-    position: absolute;
-    bottom: -50px;
-}
-
-.spansInSection1 > .watermarkSpan, .spansInSection3 > .watermarkSpan, .spansInSection2 > .watermarkSpan, .spansInSection4 > .watermarkSpan{
-    left:0;
-}
-
 @media screen and (max-width: 1024px) { /* mobiles */
     .navbarLink{
         display: none;
