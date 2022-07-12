@@ -301,18 +301,6 @@ section{
     margin-bottom: 0;
 }
 
-.spansInSection2 > .aboutContainer{
-    margin-bottom: 25px;
-}
-
-.spansInSection2 > .aboutContainer > .about{
-    font-size: 40pt;
-    outline: 3px solid var(--main_color);
-    background-color: var(--bg);
-    color: var(--main_color);
-    padding: 7px 7px 3px 7px;
-}
-
 .spansInSection2 > .but15{
     font-size: 12pt;
     font-weight: 100;
