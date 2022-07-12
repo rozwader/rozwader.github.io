@@ -1,0 +1,624 @@
+:root{
+    --main_color: #1A1A1A;
+    --bg: #E0E0E0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+a{
+    color:var(--main_color);
+    text-decoration: none;
+    font-size: 15pt;
+    border: 10px solid transparent;
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: var(--bg);
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    position: fixed;
+    left: 5%;
+    top: 10px;
+    z-index: 10;
+}
+
+#logoList{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#logo{
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20pt;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-weight: 600;
+    border: 3px solid var(--main_color);
+    color: var(--main_color);
+    box-shadow: -5px 5px 0px var(--main_color);
+    background-color: var(--bg);
+}
+
+#themeColor{
+    width: 50px;
+    height: 50px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 10px;
+    position: fixed;
+    left: 4%;
+    bottom: 75px;
+    z-index: 9;
+}
+
+#themeColorChanger{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid var(--main_color);
+    background-color: var(--bg);
+}
+
+#linkList{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+
+.navbarLink{
+    margin-right: 50px;
+}
+
+.navbarLink > button{
+    background-color: var(--bg);
+    border: 3px solid var(--main_color);
+    padding: 10px 0 10px 0;
+}
+
+.menuHitbox{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: var(--bg);
+    border: 3px solid var(--main_color);
+    display: none;
+}
+
+.line{
+    position: absolute;
+    width: 75%;
+    height: 2px;
+    left: 12.5%;
+    background-color: var(--main_color);
+}
+
+#upperLine{
+    top: 25%;
+}
+
+#middleLine{
+    top: 50%;
+}
+
+#lowerLine{
+    top: 75%;
+}
+
+#menuNavbar{
+    height: calc(100% - 100px);
+    position: fixed;
+    bottom: 0px;
+    right: -120%;
+    opacity: 0;
+    z-index: 8;
+}
+
+#menuList{
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.menuNavbarLink{
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.menuNavbarLink > button > a{
+    font-size: 20pt;
+}
+
+.menuNavbarLink > button{
+    border: 3px solid var(--main_color);
+    padding: 10px;
+    background-color: var(--bg);
+}
+
+.material-symbols-outlined{
+    color: var(--main_color);
+    font-size: 36px !important;
+}
+
+/* images */
+
+#mainPhoto{
+    position: absolute;
+    top: -12.5%;
+    right: 8%;
+}
+
+#plantsPhoto{
+    position: absolute;
+    left: 6%;
+    top: 18%;
+}
+
+#wireframePhoto{
+    position: absolute;
+    right: 6%;
+    top: 18%;
+}
+
+#whiteboardPhoto{
+    position: absolute;
+    left: 6%;
+    top: 18%;
+}
+
+/* sections */
+
+section{
+    width: 99.4vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+}
+
+/* section 1 */
+
+.spansInSection1, .spansInSection2, .spansInSection3, .spansInSection4{
+    overflow: hidden;
+}
+
+.spansInSection1{
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    z-index: 7;
+}
+
+.spansInSection1 > span, .spansInSection1 > div{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--main_color)
+}
+
+.spansInSection1 > .nameContainer > .name{
+    font-size: 40pt;
+    border: 3px solid var(--main_color);
+    padding:10px 5px 5px 10px;
+    background-color: var(--bg);
+}
+
+.spansInSection1 > .notThatBad, .spansInSection1 > .who{
+    opacity: 0.7;
+    font-weight: 500;
+}
+
+.spansInSection1 > .who{
+    margin-top: 10px;
+    font-size: 30pt;
+}
+
+.spansInSection1 > .notThatBad{
+    text-decoration: 1px underline;
+}
+
+/* section 2 */
+
+.spansInSection2{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 6;
+    right: 0;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spansInSection2 > span, .spansInSection2 > div{
+    color: var(--main_color);
+    width: 50%;
+    text-align: end;
+    margin-bottom: 10px;
+}
+
+.spansInSection2 > .realName{
+    font-size: 20pt;
+    font-weight: 500;
+}
+
+.spansInSection2 > .username{
+    font-size: 35pt;
+    font-weight: 700;
+}
+
+.spansInSection2 > .skills{
+    font-size: 25pt;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.spansInSection2 > .aboutContainer{
+    margin-bottom: 25px;
+}
+
+.spansInSection2 > .aboutContainer > .about{
+    font-size: 40pt;
+    outline: 3px solid var(--main_color);
+    background-color: var(--bg);
+    color: var(--main_color);
+    padding: 7px 7px 3px 7px;
+}
+
+.spansInSection2 > .but15{
+    font-size: 12pt;
+    font-weight: 100;
+    text-decoration: 1px underline var(--main_color);
+    margin-top: 5px;
+}
+
+.spansInSection2 > .realName, .spansInSection2 > .skills, .spansInSection2 > .but15{
+    opacity: 0.7;
+}
+
+/* section 3 */
+
+.spansInSection3{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spansInSection3 > span{
+    color: var(--main_color);
+    font-size: 40pt;
+    outline: 3px solid var(--main_color);
+    padding: 7px 7px 3px 7px;
+    margin-bottom: 20px;
+    background-color: var(--bg);
+}
+
+.spansInSection3 > .projects{
+    max-width: 290px;
+    max-height: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+#project2{
+    display: none;
+}
+
+#project3{
+    display: none;
+}
+
+.spansInSection3 > .projects > div{
+    width: 250px;
+    height: 300px;
+    outline: 3px solid var(--main_color);
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: var(--bg);
+}
+
+.spansInSection3 > .projects > div > div{
+    outline: 3px solid var(--main_color);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spansInSection3 > .projects > div > div >span{
+    color: var(--main_color);
+}
+
+.spansInSection3 > .projects > div > .photoContainer{
+    height: 40%;
+}
+
+.spansInSection3 > .projects > div > .titleContainer{
+    height: 10%;
+}
+
+.spansInSection3 > .projects > div > .infoContainer{
+    height: 20%;
+}
+
+.spansInSection3 > .projects > div > .techContainer{
+    height: 10%;
+}
+
+.arrowsContainer{
+    top: 7%;
+    width: 50%;
+    height: 90%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+.arrowsContainer > button{
+    background-color: var(--bg);
+    outline: 3px solid var(--main_color);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    position: absolute;
+}
+
+.arrowsContainer > .arrowLeft{
+    left: -25%;
+}  
+
+.arrowsContainer > .arrowRight{
+    right: -25%;
+}
+
+
+/* section 4 */
+
+.spansInSection4{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.spansInSection4 > .contact{
+    font-size: 40pt;
+    padding: 7px 7px 3px 7px;
+    outline: 3px solid var(--main_color);
+    background-color: var(--bg);
+    color: var(--main_color)
+}
+
+.spansInSection4 > .contacts{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.spansInSection4 > .contacts > span{
+    text-align: center;
+    font-size: 30pt;
+    outline: 3px solid var(--main_color);
+    padding: 7px 7px 3px 7px;
+    color: var(--main_color);
+    background-color: var(--bg);
+}
+
+.spansInSection4 > .contacts > span > a{
+    font-size: 30pt;
+    color: var(--main_color);
+}
+
+.watermarkSpan{
+    font-size: 200pt !important;
+    color: var(--main_color);
+    opacity: 0.05;
+    background-color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    position: absolute;
+    bottom: -50px;
+}
+
+.spansInSection1 > .watermarkSpan, .spansInSection3 > .watermarkSpan, .spansInSection2 > .watermarkSpan, .spansInSection4 > .watermarkSpan{
+    left:0;
+}
+
+@media screen and (max-width: 1024px) { /* mobiles */
+    .navbarLink{
+        display: none;
+    }
+    .menuHitbox{
+        display: block;
+    }
+    #menuNavbar{
+        opacity: 1;
+    }
+    .spansInSection1 > span, .spansInSection1 > div{
+        justify-content: center;
+        text-align: center;
+    }
+    .spansInSection2 > span{
+        text-align: center;
+    }
+
+    .spansInSection2 > .aboutContainer{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .spansInSection3 > .projects > div{
+        width: 180px;
+        height: 230px;
+    }
+
+    .arrowLeft, .arrowRight{
+        transform: scale(0.7);
+    }
+
+    .arrowLeft{
+        margin-left: -30px;
+    }
+
+    .arrowRight{
+        margin-right: -30px;
+    }
+
+    .spansInSection4 > .contacts > span, .spansInSection4 > .contacts > span > a{
+        font-size: 15pt;
+    }
+
+}
+
+@media screen and (max-width: 1220px) { /* only for mobiles */
+    #mainPhoto, #plantsPhoto, #wireframePhoto, #whiteboardPhoto{
+        display: none;
+    }
+    .spansInSection1, .spansInSection2, .spansInSection3, .spansInSection4{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px) { /* only for mobiles */
+    #mainPhoto, #plantsPhoto, #wireframePhoto, #whiteboardPhoto{
+        transform: scale(0.8);
+    }
+
+}
+
+@media screen and (min-width: 1000px) { /* only for desktop */
+    button:hover{
+        box-shadow: 5px 5px 0px var(--main_color);
+    }
+    .arrowsContainer > .arrowLeft:hover{
+        box-shadow: -5px 5px 0px var(--main_color);
+    }
+}
+
+@media screen and (max-width: 375px) {  /* little phones like galaxy fold or iphone se */
+    .spansInSection1 > .nameContainer > .name{
+        font-size: 33pt;
+    }
+    
+    .spansInSection1 > .who{
+        font-size: 23pt;
+    }
+
+    .spansInSection1 > .who, .spansInSection1 > .notThatBad{
+        margin-left: 0;
+    }
+
+    .spansInSection2 > .realName{
+        font-size: 10pt;
+    }
+
+    .spansInSection2 > .username{
+        font-size: 30pt;
+    }
+
+    .spansInSection2 > .skills{
+        font-size: 15pt;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1025px) and (min-height: 1000px) and (max-height: 1370px){ /* tablet */
+    .spansInSection1 > .who, .spansInSection1 > .notThatBad{
+        text-align: center;
+        margin-left: 0;
+    }
+    .spansInSection1 > .who{
+        font-size: 40pt;
+    }
+
+    .spansInSection1 > .nameContainer > .name{
+        font-size: 60pt;
+    }
+
+    .spansInSection1 > .notThatBad{
+        font-size: 20pt;
+    }
+
+    .spansInSection3 > .projects > div{
+        min-width: 400px;
+        min-height: 450px;
+    }
+
+    .arrowLeft, .arrowRight{
+        transform: scale(1);
+    }
+
+    .spansInSection4 > .contacts > span, .spansInSection4 > .contacts > span > a{
+        font-size: 25pt;
+    }
+
+}
