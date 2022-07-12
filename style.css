@@ -185,26 +185,26 @@ body{
 
 #mainPhoto{
     position: absolute;
-    top: -12.5%;
+    bottom: 0;
     right: 8%;
 }
 
 #plantsPhoto{
     position: absolute;
     left: 6%;
-    top: 18%;
+    bottom: 0;
 }
 
 #wireframePhoto{
     position: absolute;
     right: 6%;
-    top: 18%;
+    bottom: 0;
 }
 
 #whiteboardPhoto{
     position: absolute;
     left: 6%;
-    top: 18%;
+    bottom: 0;
 }
 
 /* sections */
